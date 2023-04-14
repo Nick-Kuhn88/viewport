@@ -138,12 +138,15 @@ footer .icon{
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
+@media (prefers-reduced-motion) {
     @-webkit-keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
     @keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
+}
+    
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
 
 
@@ -318,7 +321,8 @@ img{
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and (min-width: 1815px) {
+    header, footer{
         background-color: var(--orange);
         padding-left: 5%;
     }
@@ -383,5 +387,7 @@ img{
 
     #three p, #four p, #five p, #six p{
         padding-top: 2em;
-    } */
+    }
+}
+    
 /* --------------- END EXTRA LARGE SCREEN SIZES --------------- */
